@@ -2,8 +2,14 @@ package main
 
 import "boilerplate_golangfront/handlers"
 
-var server = handlers.Server{}
+const (
+	listeningPort = ":8080"
+)
+
+var (
+	server = handlers.Server{}
+)
 
 func main() {
-	server.Init(":8080")
+	server.Init(listeningPort)
 }

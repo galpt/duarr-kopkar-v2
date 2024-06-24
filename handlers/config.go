@@ -25,6 +25,7 @@ func (server *Server) Init(port string) {
 	server.Router.Static("/img", "views/img")
 	server.Router.Static("/js", "views/js")
 
-	fmt.Println("Server started.\nListening on 127.0.0.1/")
+	notify := fmt.Sprintf("Server started.\nAccess on:\n - http://0.0.0.0%v/\n - http://127.0.0.1%v/", port, port)
+	fmt.Println(notify)
 	server.Router.Run(port)
 }
