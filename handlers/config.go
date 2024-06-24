@@ -19,6 +19,7 @@ func (server *Server) Init(port string) {
 	// disini untuk routing custom sesuai kebutuhan
 	server.home()
 	server.login()
+	server.register()
 	server.apiStatus()
 
 	// Load HTML and Static files
