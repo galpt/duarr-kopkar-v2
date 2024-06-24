@@ -16,7 +16,9 @@ func (server *Server) Init(port string) {
 	gin.SetMode(gin.ReleaseMode)
 	server.Router = gin.New()
 
+	// disini untuk routing custom sesuai kebutuhan
 	server.home()
+	server.login()
 	server.apiStatus()
 
 	// Load HTML and Static files

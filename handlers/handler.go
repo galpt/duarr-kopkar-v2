@@ -7,11 +7,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// RenderHome ... render the index.html page
+// Ini untuk handle pathname (istilah lainnya "routing")
 func RenderHome(c *gin.Context) {
-	c.HTML(200, "index.html", gin.H{
-		"title": "Go Gin Boiler Plate",
-	})
+	c.HTML(200, "home.html", gin.H{})
+}
+
+func RenderLoginPage(c *gin.Context) {
+	c.HTML(200, "login.html", gin.H{})
 }
 
 func ApiStatus(c *gin.Context) {
