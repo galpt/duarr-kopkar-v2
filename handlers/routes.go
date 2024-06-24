@@ -1,9 +1,9 @@
 package handlers
 
-func (server *Server) initRoutes() {
+func (server *Server) home() {
 	server.Router.GET("/", RenderHome)
 }
 
 func (server *Server) apiStatus() {
-	server.Router.GET("/api", Welcome)
+	server.Router.GET("/api", ApiStatus)
 }

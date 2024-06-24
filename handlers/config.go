@@ -16,7 +16,8 @@ func (server *Server) Init(port string) {
 	gin.SetMode(gin.ReleaseMode)
 	server.Router = gin.New()
 
-	server.initRoutes()
+	server.home()
+	server.apiStatus()
 
 	// Load HTML and Static files
 	server.Router.LoadHTMLGlob("views/*.html")

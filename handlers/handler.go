@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -13,8 +14,8 @@ func RenderHome(c *gin.Context) {
 	})
 }
 
-func Welcome(c *gin.Context) {
+func ApiStatus(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message": "Server started successfully at" + time.Now().String(),
+		"message": fmt.Sprintf("Server time: %v", time.Now().UTC().Format(time.RFC850)),
 	})
 }
