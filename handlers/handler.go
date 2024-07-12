@@ -27,7 +27,6 @@ func HandleRegistrasi(c *gin.Context) {
 
 	c.Bind(&acc)
 
-<<<<<<< HEAD
 	// tes print data dari form ke console
 	templatePrint := fmt.Sprintf("Nama: %v\nEmail: %v\nUsername: %v\nPassword: %v\nNoHandphone: %v\n", acc.Nama, acc.Email, acc.Username, acc.Password, acc.NoHandphone)
 	fmt.Println("--- Test Registrasi ---")
@@ -39,10 +38,6 @@ func HandleRegistrasi(c *gin.Context) {
 	writeToDB(fmt.Sprintf("acc.user.%v.nama", acc.Username), acc.Nama)
 	writeToDB(fmt.Sprintf("acc.user.%v.email", acc.Username), acc.Email)
 	writeToDB(fmt.Sprintf("acc.user.%v.nohp", acc.Username), fmt.Sprintf("%v", acc.NoHandphone))
-=======
-	templatePrint := fmt.Sprintf("Nama: %v\nEmail: %v\nUsername: %v\nPassword: %v\nNoHandphone: %v\n", acc.Nama, acc.Email, acc.Username, acc.Password, acc.NoHandphone)
-	fmt.Println(templatePrint)
->>>>>>> 99e0ac840b778d0b32a2871e36bf8bc143db0944
 
 	c.JSON(200, gin.H{
 		"Nama":        acc.Nama,
