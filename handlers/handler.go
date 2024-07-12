@@ -24,7 +24,12 @@ func HandleRegistrasi(c *gin.Context) {
 	var (
 		acc Account
 	)
+
 	c.Bind(&acc)
+
+	templatePrint := fmt.Sprintf("Nama: %v\nEmail: %v\nUsername: %v\nPassword: %v\nNoHandphone: %v\n", acc.Nama, acc.Email, acc.Username, acc.Password, acc.NoHandphone)
+	fmt.Println(templatePrint)
+
 	c.JSON(200, gin.H{
 		"Nama":        acc.Nama,
 		"Email":       acc.Email,
