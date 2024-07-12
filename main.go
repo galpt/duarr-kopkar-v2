@@ -1,6 +1,8 @@
 package main
 
-import "boilerplate_golangfront/handlers"
+import (
+	"boilerplate_golangfront/handlers"
+)
 
 const (
 	listeningPort = ":8080"
