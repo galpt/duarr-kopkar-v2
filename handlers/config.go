@@ -20,6 +20,11 @@ func (server *Server) Init(port string) {
 	server.home()
 	server.login()
 	server.register()
+	server.guest()
+	server.history()
+	server.profile()
+	server.security()
+	server.settings()
 	server.apiStatus()
 
 	// Load HTML and Static files

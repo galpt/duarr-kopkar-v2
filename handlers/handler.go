@@ -9,15 +9,35 @@ import (
 
 // Ini untuk handle pathname (istilah lainnya "routing")
 func RenderHome(c *gin.Context) {
-	c.HTML(200, "home.html", gin.H{})
+	c.HTML(200, "index.html", gin.H{})
 }
 
-func RenderLoginPage(c *gin.Context) {
+func RenderLogin(c *gin.Context) {
 	c.HTML(200, "login.html", gin.H{})
 }
 
-func RenderRegisterPage(c *gin.Context) {
+func RenderRegister(c *gin.Context) {
 	c.HTML(200, "register.html", gin.H{})
+}
+
+func RenderGuest(c *gin.Context) {
+	c.HTML(200, "guest.html", gin.H{})
+}
+
+func RenderHistory(c *gin.Context) {
+	c.HTML(200, "history.html", gin.H{})
+}
+
+func RenderProfile(c *gin.Context) {
+	c.HTML(200, "profile.html", gin.H{})
+}
+
+func RenderSecurity(c *gin.Context) {
+	c.HTML(200, "security.html", gin.H{})
+}
+
+func RenderSettings(c *gin.Context) {
+	c.HTML(200, "settings.html", gin.H{})
 }
 
 func HandleRegistrasi(c *gin.Context) {
